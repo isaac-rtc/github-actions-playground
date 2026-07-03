@@ -1,7 +1,16 @@
 {
-  "projectName": "JSON Practice",
-  "owner": "Isaac",
-  "version": "1.0.0",
-  "active": true,
-  "languages": ["Python", "JavaScript", "YAML"]
+  "repository": {
+    "name": "github-actions-playground",
+    "description": "Learning GitHub Actions one workflow at a time",
+    "homepage": "https://github.com/guzmanisaac001/github-actions-playground"
+  },
+  "owner": {
+    "name": "Isaac",
+    "organization": "Personal"
+  },
+  "topics": [
+    "github-actions",
+    "automation",
+    "python"
+  ]
 }
