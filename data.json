@@ -1,0 +1,7 @@
+{
+  "projectName": "JSON Practice",
+  "owner": "Isaac",
+  "version": "1.0.0",
+  "active": true,
+  "languages": ["Python", "JavaScript", "YAML"]
+}
