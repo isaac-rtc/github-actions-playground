@@ -1,16 +1,6 @@
 {
   "repository": {
-    "name": "github-actions-playground",
-    "description": "Learning GitHub Actions one workflow at a time",
-    "homepage": "https://github.com/isaac-rtc/github-actions-playground"
-  },
-  "owner": {
-    "name": "Isaac",
-    "organization": "Personal"
-  },
-  "topics": [
-    "github-actions",
-    "automation",
-    "python"
-  ]
+    "description": "A playground for learning GitHub Actions and APIs",
+    "homepage": "https://example.com"
+  }
 }
