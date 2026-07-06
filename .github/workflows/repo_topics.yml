@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write
+      administration: write
 
     steps:
       - name: Create repository topics
