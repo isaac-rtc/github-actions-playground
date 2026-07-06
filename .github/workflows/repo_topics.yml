@@ -7,17 +7,14 @@ jobs:
   create_topic:
     runs-on: ubuntu-latest
 
-    permissions:
-      administration: write
-
     steps:
-      - name: Create repository topics
+      - name: Replace repository topics
         run: |
           curl \
-            -X PUT \
-            --url https://api.github.com/repos/${{ github.repository }}/topics \
+            --request PUT \
+            --url "https://api.github.com/repos/${{ github.repository }}/topics" \
             --header "Accept: application/vnd.github+json" \
-            --header "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            --header "Authorization: Bearer ${{ secrets.TOPICS_TOKEN }}" \
             --header "X-GitHub-Api-Version: 2026-03-10" \
             --header "Content-Type: application/json" \
             --data '{
