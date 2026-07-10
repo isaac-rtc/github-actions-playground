@@ -1,0 +1,19 @@
+name: Sync repository topics from code.json
+
+description: Synchronizes a repository's GitHub topics with the tags in code.json
+
+inputs:
+  token:
+    description: Token with permission to update repository topics
+    required: true
+
+runs:
+  using: composite
+
+  steps:
+    - name: Sync repository topics
+      shell: bash
+      env:
+        GITHUB_TOKEN_FOR_TOPICS: ${{ inputs.token }}
+      run: |
+        python "$GITHUB_ACTION_PATH/scripts/sync_topics_from_codejson.py"
