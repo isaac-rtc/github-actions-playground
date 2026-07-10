@@ -1,0 +1,23 @@
+name: Sync repo topics from code.json
+
+on:
+  pull_request:
+    types: [closed]
+    paths:
+      - "code.json"
+
+jobs:
+  sync_topics:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout merged repository
+        uses: actions/checkout@v4
+
+      - name: Sync repository topics from code.json
+        env:
+          GITHUB_TOKEN_FOR_TOPICS: ${{ secrets.TOPICS_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          python scripts/sync_topics_from_codejson.py
