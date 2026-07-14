@@ -77,6 +77,8 @@ def main() -> None:
 
     topics = read_code_json_tags(CODE_JSON_PATH)
 
+    print(f"Target repository: {repository}")
+
     print(f"Syncing {len(topics)} topics from code.json:")
     print(", ".join(topics))
 
